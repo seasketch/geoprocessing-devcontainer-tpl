@@ -1,22 +1,30 @@
 version: '3'
 services:
   workspace:
+    user: root
+    env_file: .env
     image: seasketch/geoprocessing-workspace
+
+    volumes:
+      # Bound host volume for all common assets
+      - ../common:/common:cached
+      # Bound host volume for file sharing
+      - ../share:/share:cached
+      # Bound host volume for all project data
+      - "${GP_DATA_FOLDER}:/data:cached"
+      # Internal named volume for all code assets.
+      - code_volume:/workspaces
+
+    # Keep container running after start
+    command: sleep infinity
+    # connect db service to network
+    network_mode: service:db
     # database connection parameters
     environment:
       PGHOST: "db"
       PGUSER: "docker"
       PGPASSWORD: "docker"
       PGDATABASE: "gis"
-
-    # Persistent volume for holding code assets
-    volumes:
-      - code_volume:/workspaces
-
-    network_mode: service:db
-    # Keep container running after start
-    command: sleep infinity
-    user: root
   db:
     image: seasketch/geoprocessing-db
     # Port 54320 will be exposed on the host machine for accessing postgis.

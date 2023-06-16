@@ -1,8 +1,8 @@
 {
-	"name": "Home",
+	"name": "Geoprocessing",
 	  "dockerComposeFile": "docker-compose.yml",
 	  "service": "workspace",
-	  "workspaceFolder": "/workspaces",
+	  "workspaceFolder": "/workspaces/geoprocessing",
 	"shutdownAction": "stopCompose",
 	  "remoteUser": "root",
 	  "containerUser": "root"
