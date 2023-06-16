@@ -1,5 +1,5 @@
 {
-	"name": "Home",
+	"name": "Geoprocessing",
 	  "dockerComposeFile": "docker-compose.yml",
 	  "service": "workspace",
 	  "workspaceFolder": "/workspaces",

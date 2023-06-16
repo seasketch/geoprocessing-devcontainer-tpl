@@ -1,9 +1,0 @@
-{
-	"name": "Azores Nearshore",
-	  "dockerComposeFile": "docker-compose.yml",
-	  "service": "workspace",
-	  "workspaceFolder": "/workspaces/azores-nearshore",
-	"shutdownAction": "stopCompose",
-	  "remoteUser": "root",
-	  "containerUser": "root"
-  }
