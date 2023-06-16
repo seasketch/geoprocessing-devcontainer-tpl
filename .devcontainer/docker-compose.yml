@@ -11,7 +11,7 @@ services:
       # Bound host volume for file sharing
       - ../share:/share:cached
       # Bound host volume for all project data
-      - "/Users/twelch/Box\ Sync:/data:cached"
+      - "/Users/twelch/Box\ Sync:/data/box:cached"
       # Internal named volume for all code assets.
       - code_volume:/workspaces
 
