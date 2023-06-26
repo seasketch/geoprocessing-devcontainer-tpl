@@ -10,8 +10,10 @@ services:
       - ../common:/common:cached
       # Bound host volume for file sharing
       - ../share:/share:cached
-      # Bound host volume for all project data
-      - "/Users/twelch/Box\ Sync:/data/box:cached"
+      # Bound host volume for Box data folder (MacOS)
+      - "~/Box\ Sync:/data/box:cached"
+      # Bound host volume for Box data/folder (Windows WSL)
+      # -
       # Internal named volume for all code assets.
       - code_volume:/workspaces
 
