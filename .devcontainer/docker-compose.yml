@@ -5,15 +5,16 @@ services:
     env_file: .env
     image: seasketch/geoprocessing-workspace
 
+    # Mount everything we need, because docker containers don't persist anything
     volumes:
-      # Bound host volume for all common assets
+      # AWS credentials
+      - ~\.aws\credentials:/root/.aws/credentials:ro
+      # Common assets
       - ../common:/common:cached
-      # Bound host volume for file sharing
+      # Quick file share
       - ../share:/share:cached
-      # Bound host volume for Box data folder (MacOS)
-      - "~/Box\ Sync:/data/box:cached"
-      # Bound host volume for Box data/folder (Windows WSL)
-      # -
+      # Bound host volume for Box data folder (MacOS only using Box Sync app)
+      # - "~/Box\ Sync:/data/box:cached"
       # Internal named volume for all code assets.
       - code_volume:/workspaces
 
