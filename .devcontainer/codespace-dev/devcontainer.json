@@ -3,7 +3,7 @@
 	  "dockerComposeFile": "docker-compose.yml",
 	  "service": "workspace",
 	  "workspaceFolder": "/workspaces",
-	  "postStartCommand": "/common/scripts/postStart.sh",
+	  "postCreateCommand": "/workspaces/geoprocessing-devcontainer/common/scripts/postCreateCodespace.sh",
 	  "shutdownAction": "stopCompose",
 	  "remoteUser": "vscode",
 	  "containerUser": "vscode"
