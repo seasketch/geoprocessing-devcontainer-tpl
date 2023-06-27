@@ -1,7 +1,7 @@
 Geoprocessing Devcontainer
 =====
 
-Provides a [devcontainer](https://containers.dev/) for developing geoprocessing projects in a stable container environment using [geoprocessing-workspace](https://github.com/seasketch/docker-gp-workspace).
+Provides a [devcontainer](https://containers.dev/) for developing geoprocessing projects in a stable container environment on top of [geoprocessing-workspace](https://github.com/seasketch/docker-gp-workspace).
 
 Instructions to use it are part of the standard [tutorial](https://github.com/seasketch/geoprocessing/wiki/Tutorials).
 

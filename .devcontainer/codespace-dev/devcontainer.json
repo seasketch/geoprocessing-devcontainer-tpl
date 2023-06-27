@@ -1,9 +1,10 @@
 {
-	"name": "Geoprocessing",
+	"name": "Geoprocessing Codespace",
 	  "dockerComposeFile": "docker-compose.yml",
 	  "service": "workspace",
 	  "workspaceFolder": "/workspaces",
 	  "postStartCommand": "/common/scripts/postStart.sh",
 	  "shutdownAction": "stopCompose",
-	  "remoteUser": "vscode"
+	  "remoteUser": "vscode",
+	  "containerUser": "vscode"
   }

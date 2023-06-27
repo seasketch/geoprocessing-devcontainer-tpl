@@ -1,1 +1,5 @@
-if cd /workspaces/geoprocessing; then git pull; else git clone https://github.com/seasketch/geoprocessing; fi
+#!/bin/bash
+
+if [ ! -d "/workspaces/geoprocessing" ]; then
+    git clone -b devcontainer https://github.com/seasketch/geoprocessing;
+fi
