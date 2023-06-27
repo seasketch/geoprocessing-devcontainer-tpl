@@ -4,15 +4,6 @@ services:
     user: root
     image: seasketch/geoprocessing-workspace
 
-    # Mount everything we need, because docker containers don't persist anything
-    volumes:
-      # Common assets
-      - ../common:/common:cached
-      # Quick file share
-      - ../share:/share:cached
-      # Internal named volume for all code assets.
-      - code_volume:/workspaces
-
     # Keep container running after start
     command: sleep infinity
     # connect db service to network
@@ -28,7 +19,3 @@ services:
     # Port 54320 will be exposed on the host machine for accessing postgis.
     ports:
       - "54320:5432"
-
-# Use named volumes for faster read/write performance
-volumes:
-  code_volume:
