@@ -12,6 +12,9 @@
 			"repositories": {
 				"seasketch/geoprocessing": {
 					"permissions": "write-all"
+				},
+				"seasketch/blorty-blort": {
+					"permissions": "write-all"
 				}
 			}
 		}
