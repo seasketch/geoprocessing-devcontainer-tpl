@@ -3,8 +3,17 @@
 	  "dockerComposeFile": "docker-compose.yml",
 	  "service": "workspace",
 	  "workspaceFolder": "/workspaces",
-	  "postCreateCommand": "/workspaces/geoprocessing-devcontainer/common/scripts/postCreateCodespace.sh",
+	  "postCreateCommand": "bash /workspaces/geoprocessing-devcontainer/common/scripts/postCreateCodespace.sh",
 	  "shutdownAction": "stopCompose",
 	  "remoteUser": "vscode",
-	  "containerUser": "vscode"
+	  "containerUser": "vscode",
+	  "customizations": {
+		"codespaces": {
+			"repositories": {
+				"seasketch/geoprocessing": {
+					"permissions": "write-all"
+				}
+			}
+		}
+	}
   }
