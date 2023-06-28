@@ -9,14 +9,7 @@
 	  "containerUser": "vscode",
 	  "customizations": {
 		"codespaces": {
-			"repositories": {
-				"seasketch/geoprocessing": {
-					"permissions": "write-all"
-				},
-				"seasketch/blorty-blort": {
-					"permissions": "write-all"
-				}
-			}
+			"repositories": {}
 		}
 	}
   }
