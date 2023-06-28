@@ -8,5 +8,4 @@ if [ ! -d "/workspaces/geoprocessing" ]; then
     . /workspaces/geoprocessing-devcontainer/common/scripts/setup.sh;
     cd /workspaces/geoprocessing;
     npm install;
-    npm test;
 fi
