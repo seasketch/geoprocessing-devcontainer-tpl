@@ -2,7 +2,19 @@ version: '3'
 services:
   workspace:
     user: root
+    env_file: .env
     image: seasketch/geoprocessing-workspace
+
+    # Mount everything we need, because docker containers don't persist anything
+    volumes:
+      # Common assets
+      - ../common:/common:cached
+      # Quick file share
+      - ../share:/share:cached
+      # Bound host volume for data folder, preset to Box Sync used by seasketch team
+      # - "~/Box\ Sync:/data:cached"
+      # Internal named volume for all code assets.
+      - code_volume:/workspaces
 
     # Keep container running after start
     command: sleep infinity
@@ -19,3 +31,7 @@ services:
     # Port 54320 will be exposed on the host machine for accessing postgis.
     ports:
       - "54320:5432"
+
+# Use named volumes for faster read/write performance
+volumes:
+  code_volume:

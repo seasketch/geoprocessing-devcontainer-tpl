@@ -1,0 +1,9 @@
+{
+	"name": "Geoprocessing Local",
+	  "dockerComposeFile": "docker-compose.yml",
+	  "service": "workspace",
+	  "workspaceFolder": "/workspaces",
+	  "postCreateCommand": "/common/scripts/postCreate.sh",
+	  "shutdownAction": "stopCompose",
+	  "remoteUser": "vscode"
+  }
