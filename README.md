@@ -16,7 +16,10 @@ The devcontainers require the following environment variables to be defined:
 
 ## Geoprocessing Codespace
 
-This top-level devcontainer is designed to be used with Github Codespaces.  It requires that you set the environment variables in your Github Codespaces settings - https://github.com/settings/codespaces.
+This top-level devcontainer is designed to be used with Github Codespaces.  To use it you must:
+
+* Create a codespace with at least 4 cpu cores, ensuring that at least 8GB of ram are available.
+* Set the above environment variables in your personal Github Codespaces settings - https://github.com/settings/codespaces, and give this `geoprocessing-devcontainer` repo access to these variables.
 
 ## Geoprocessing Local
 
