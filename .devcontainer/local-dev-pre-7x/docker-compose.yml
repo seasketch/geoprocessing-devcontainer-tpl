@@ -3,7 +3,7 @@ services:
   workspace:
     user: root
     env_file: .env
-    image: seasketch/geoprocessing-workspace # Latest
+    image: seasketch/geoprocessing-workspace:sha-69bb889 # Last 6.x image
 
     # Mount everything we need, because docker containers don't persist anything
     volumes:

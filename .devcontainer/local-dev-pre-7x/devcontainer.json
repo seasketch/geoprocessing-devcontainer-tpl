@@ -1,5 +1,5 @@
 {
-	"name": "Geoprocessing Local Stable",
+	"name": "Geoprocessing Local Pre-7.x",
 	  "dockerComposeFile": "docker-compose.yml",
 	  "service": "workspace",
 	  "workspaceFolder": "/workspaces",

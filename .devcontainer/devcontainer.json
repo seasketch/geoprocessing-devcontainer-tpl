@@ -7,6 +7,34 @@
 	  "shutdownAction": "stopCompose",
 	  "remoteUser": "vscode",
 	  "containerUser": "vscode",
-	  "customizations": {}
+	  "customizations": {
+		"codespaces": {
+			"repositories": {
+				"seasketch/geoprocessing": {
+					"permissions": "write-all"
+				},
+				"seasketch/azores-nearshore-reports": {
+					"permissions": "write-all"
+				},
+				"seasketch/brazil-reports": {
+					"permissions": "write-all"
+				},
+				"seasketch/maldives-nearshore-reports": {
+					"permissions": "write-all"
+				},
+				"seasketch/fsm-reports": {
+					"permissions": "write-all"
+				},
+				"seasketch/samoa-reports": {
+					"permissions": "write-all"
+				},
+				"seasketch/fiji-reports": {
+					"permissions": "write-all"
+				},
+				"seasketch/belize-reports": {
+					"permissions": "write-all"
+				}
+			}
+		}
 	}
   }
